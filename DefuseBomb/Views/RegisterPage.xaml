@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DefuseBomb.Views.RegisterPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:DefuseBomb.ViewModels"  
+             xmlns:model="clr-namespace:DefuseBomb.Models"  
+             x:Name="BrowseItemsPage">
+
+    <StackLayout Padding="20">
+        <Entry Placeholder="Username" x:Name="UsernameEntry"/>
+        <Entry Placeholder="Email" x:Name="EmailEntry" />
+        <Entry Placeholder="Password" IsPassword="True" x:Name="PasswordEntry" />
+        <Entry Placeholder="Confirm Password" IsPassword="True" x:Name="ConfirmPasswordEntry" />
+
+        <Button Text="Register" Clicked="OnRegisterButtonClicked" />
+    </StackLayout>
+    
+</ContentPage>
