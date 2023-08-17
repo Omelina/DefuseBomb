@@ -6,7 +6,7 @@ namespace DefuseBomb
 {
     public class RankingItem
     {
-        public string PlayerName { get; set; }
+        public string PlayerName {get; set;}
         public int Points { get; set; }
     }
 }
