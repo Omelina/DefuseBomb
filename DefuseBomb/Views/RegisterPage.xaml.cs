@@ -34,15 +34,15 @@ namespace DefuseBomb.Views
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
             {
-                DisplayAlert("Error", "Please fill in all fields", "OK");
+                DisplayAlert("Error", "Complete todos los espacios requeridos", "OK");
             }
             else if (!ValidarPassword(password)){
 
-                DisplayAlert("Error", "La password debe de tener minimo una mayuscula, un numero y mas de 6 caracteres", "OK");
+                DisplayAlert("Error", "La contraseña debe tener al menos una mayúscula, un número y más de 6 caracteres.", "OK");
             }
             else if (password != confirmPassword)
             {
-                DisplayAlert("Error", "Passwords do not match", "OK");
+                DisplayAlert("Error", "Las contraseñas no coinciden", "OK");
             }
             else
             {
@@ -54,7 +54,7 @@ namespace DefuseBomb.Views
                 };
                 Usuario.ListaUsuarios.Add(newUser);
                 // Registro exitoso, puedes mostrar un mensaje o navegar a otra página.
-                DisplayAlert("Success", "Registration successful", "OK");
+                DisplayAlert("Success", "Registro exitoso", "OK");
                 // Puedes navegar a la página de inicio de sesión u otra página después del registro exitoso.
                 Navigation.PushAsync(new LoginPage());
             }

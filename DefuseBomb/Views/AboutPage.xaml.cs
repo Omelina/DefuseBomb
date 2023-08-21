@@ -30,20 +30,17 @@ namespace DefuseBomb.Views
 
             if (button.Text == bomb)
             {
-                //,"\n","Segundo: ", top3[1], "\n","Tercero: ", top3[0]
+                
                 guardar(scores);
-                string mensaje = "Top 3 scores:\n" +
-                                 $"Primero: {top3[0]}\n" +
-                                 $"Segundo: {top3[1]}\n" +
-                                 $"Tercero: {top3[2]}";
-                await App.Current.MainPage.DisplayAlert("Bomb Exploted ",mensaje, "Retry");
+                string mensaje = "Puntos obtenidos: " + scores;
+                await App.Current.MainPage.DisplayAlert("Bomba Explotada ",mensaje, "Reintentar");
                 bomb = new Random().Next(1, 4).ToString();
                 scores = 0;
             }
             else
             {
                 scores += 3;
-                await DisplayAlert("Bomb Defused!", "Scores: " + scores, "Continue");
+                await DisplayAlert("Bomba Desactivada!", "Puntos: " + scores, "Continuar");
                 bomb = new Random().Next(1, 4).ToString();
             }
         }

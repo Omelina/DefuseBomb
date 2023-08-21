@@ -54,7 +54,7 @@ namespace DefuseBomb.Views
                 else
                 {
                     int intentosRestantes = 3 - intentosFallidos;
-                    await DisplayAlert("Error", $"Invalid username or password. Te quedan {intentosRestantes} intentos.", "OK");
+                    await DisplayAlert("Error", $"Contraseña o usuario incorrectos. Te quedan {intentosRestantes} intentos.", "OK");
                 }
                 //await DisplayAlert("Error", "Invalid username or password", "OK");
             }
